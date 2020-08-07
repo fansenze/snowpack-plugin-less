@@ -1,5 +1,5 @@
 # snowpack-plugin-less
-Use the Less compiler to build .less files from source
+Use the [Less](https://github.com/less/less.js) compiler to build `.less` files from source
 
 ## Usage
 
