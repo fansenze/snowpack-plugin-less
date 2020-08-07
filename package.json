@@ -1,10 +1,9 @@
 {
   "name": "snowpack-plugin-less",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Use the Less compiler to build .less files from source",
   "main": "plugin.js",
-  "scripts": {
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fansenze/snowpack-plugin-less.git"
@@ -20,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/fansenze/snowpack-plugin-less/issues"
   },
-  "homepage": "https://github.com/fansenze/snowpack-plugin-less#readme"
+  "homepage": "https://github.com/fansenze/snowpack-plugin-less#readme",
+  "dependencies": {
+    "less": "^3.12.2"
+  }
 }
