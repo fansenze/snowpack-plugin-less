@@ -4,7 +4,7 @@ const fs = require('fs');
 const pkg = require('./package.json');
 
 const render = async (filepath) => {
-  return new Promise((resovle, reject) => {
+  return new Promise((resolve, reject) => {
     fs.readFile(filepath, { encoding: 'utf-8' }, (err, data) => {
       if (err) {
         reject(err);
@@ -13,7 +13,7 @@ const render = async (filepath) => {
           if (err) {
             reject(err);
           } else {
-            resovle(result);
+            resolve(result);
           }
         });
       }
