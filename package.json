@@ -12,7 +12,8 @@
     "snowpack",
     "less",
     "css",
-    "style"
+    "style",
+    "snowpack-plugin"
   ],
   "author": "senze.fan",
   "license": "ISC",
