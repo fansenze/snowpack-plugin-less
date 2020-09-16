@@ -3,13 +3,13 @@ const fs = require('fs');
 
 const pkg = require('./package.json');
 
-const render = async (filepath) => {
+const render = async (filepath, options) => {
   return new Promise((resolve, reject) => {
     fs.readFile(filepath, { encoding: 'utf-8' }, (err, data) => {
       if (err) {
         reject(err);
       } else {
-        compiler.render(data, { filename: filepath }, (err, result) => {
+        compiler.render(data, { ...options, filename: filepath }, (err, result) => {
           if (err) {
             reject(err);
           } else {
@@ -19,9 +19,9 @@ const render = async (filepath) => {
       }
     });
   });
-}
+};
 
-module.exports = function plugin(snowpackConfig) {
+module.exports = function plugin(snowpackConfig, options = {}) {
   return {
     name: pkg.name,
     resolve: {
@@ -30,7 +30,7 @@ module.exports = function plugin(snowpackConfig) {
     },
     async load({ filePath }) {
       try {
-        const result = await render(filePath);
+        const result = await render(filePath, options);
         return {
           '.css': result.css,
         };
@@ -39,4 +39,4 @@ module.exports = function plugin(snowpackConfig) {
       }
     },
   };
-}
+};
