@@ -20,3 +20,15 @@ add this plugin to your Snowpack config:
 }
 ```
 
+### Use Custom Less Compile Options
+
+```json
+{
+  "plugins": [
+    [
+      "snowpack-plugin-less",
+      { /* less render options */ }
+    ]
+  ]
+}
+```
