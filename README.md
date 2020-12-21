@@ -21,9 +21,12 @@ add this plugin to your Snowpack config:
 ```
 
 ### Use Custom Less Compile Options
+**snowpack.config.js**
+```javascript
+const path = require("path");
 
-```json
-{
+module.exports = {
+  // ...another config
   "plugins": [
     [
       "snowpack-plugin-less",
