@@ -1,6 +1,6 @@
 {
   "name": "snowpack-plugin-less",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Use the Less compiler to build .less files from source",
   "main": "dist/index.js",
   "files": [
